@@ -5,8 +5,8 @@ public class PartTimeStudent extends Student {
     public PartTimeStudent(String firstName, String lastName, double creditHour){
         super(firstName,lastName,false);
         // 30 - 40 Hours Max.
-        if(creditHour <= 0.0)
-            throw new IllegalArgumentException("Credit Hour must be > than 0.0");
+        if(creditHour <= 0.0 || creditHour > 40)
+            throw new IllegalArgumentException("Credit Hour must be > than 0.0 and less than 40.");
         this.creditHour = creditHour;
     }
 

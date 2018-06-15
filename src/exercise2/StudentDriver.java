@@ -32,12 +32,21 @@ public class StudentDriver {
             aStudent = new FullTimeStudent(firstName,lastName);
         }
         else{
-            try {
-                System.out.print("Enter your Credit Hours : ");
-                creditHour = input.nextDouble();
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid Answer. Set default to $50.00");
-                creditHour = 20;
+            for (int i = 0; i < 1; i++) {
+                try {
+                    System.out.print("Enter your Credit Hours : ");
+                    creditHour = input.nextDouble();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid Answer. Set default to 30.0");
+                    creditHour = 30;
+                    break;
+                }
+                if(creditHour <= 0.0 || creditHour > 40){
+                    System.out.println("Credit Hour must be > than 0.0 and less than 40.");
+                    i--;
+                }
+                else
+                    break;
             }
             aStudent = new PartTimeStudent(firstName,lastName,creditHour);
         }
