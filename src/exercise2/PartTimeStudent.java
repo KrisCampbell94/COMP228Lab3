@@ -1,7 +1,7 @@
 package exercise2;
 
 public class PartTimeStudent extends Student {
-    public double creditHour;
+    private double creditHour;
     public PartTimeStudent(String firstName, String lastName, double creditHour){
         super(firstName,lastName,false);
         // 30 - 40 Hours Max.

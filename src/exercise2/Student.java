@@ -1,8 +1,8 @@
 package exercise2;
 
 public abstract class Student {
-    public String[] name;
-    public boolean isFullTime;
+    private String[] name;
+    private boolean isFullTime;
 
     public Student(String firstName, String lastName, boolean isFullTime){
         this.name = new String[2];
