@@ -1,7 +1,5 @@
 package exercise1;
 
-// Used for InputMismatchException capabilities
-import java.util.InputMismatchException;
 // Used for Scanner capabilities
 import java.util.Scanner;
 
@@ -31,15 +29,23 @@ public class Driver {
                 // If not, prompt the user about the invalid answer
                 i = invalidAnswer();
             }// End of inner for loop (int i)
-            // Prompts the user to enter in a monthly cost
-            System.out.print("Enter your monthly cost:   ");
-            try {
-                cost = input.nextDouble();
-            } catch (InputMismatchException e) {
-                // Catches any input that's not numerical, and set the cost to 50
-                System.out.println("Invalid Answer. Set default to $50.00");
-                cost = 50;
-            }
+
+            for (int i = 0; i < 1; i++) {
+                // Prompts the user to enter in a monthly cost
+                System.out.print("Enter your monthly cost:   ");
+                // Try Catch statement to test whether the user inputted the wrong format.
+                try {
+                    cost = input.nextDouble();
+                } catch (NumberFormatException e) {
+                    // Catches any input that's not numerical, and set the cost to 50
+                    System.out.println("Invalid Answer.");
+                } // End of Try Catch statement
+                if(cost < 0.0)
+                    System.out.println("Monthly cost must be greater than 0.0");
+                else break;
+                i--;
+            } // End of For loop
+
             // Sets the insurance based on the cost and the type
             if (insuranceType.equals("H"))
                 insurances[j] = new Health("Health", cost);
