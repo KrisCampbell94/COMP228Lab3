@@ -10,4 +10,4 @@ public interface MortgageConstants {
     String bankName = "CityToronto Bank";
     // Constant method for maximum mortgage amount
     double maximumMortgageAmount();
-}
+} // End of Mortgage Constants Interface

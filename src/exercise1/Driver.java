@@ -19,7 +19,7 @@ public class Driver {
             // A for loop for asking the user to enter the insurance type
             for (int i = 0; i < 1; i++) {
                 // Prompts the user to enter in the insurance type
-                System.out.print("\nEnter your insurance type: ");
+                System.out.print("\nEnter your insurance type (ENTER Health/Life): ");
                 insuranceType = input.next();
                 // This makes any input string into all uppercase
                 // and split it by each character and grabbing the first letter
@@ -62,7 +62,7 @@ public class Driver {
 
     private static int invalidAnswer(){
         // Tells the user their answer was invalid, and how to not do it again
-        System.out.println("Invalid Answer. Enter either Health or Life.");
+        System.out.println("Invalid Answer. Please enter either Health or Life.");
         return -1;
     } // End of invalidAnswer Method
 }

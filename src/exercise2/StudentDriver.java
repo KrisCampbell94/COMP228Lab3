@@ -44,7 +44,7 @@ public class StudentDriver {
             double creditHour = 5;
             // For loop to loop until the correct answer is inputted
             for (int i = 0; i < 1; i++) {
-                System.out.print("Enter your Credit Hours : ");
+                System.out.print("Enter your Credit Hours (RANGE 1-40) : ");
                 // Try Catch statement to test whether the user inputted the wrong format.
                 try {
                     creditHour = input.nextDouble();
