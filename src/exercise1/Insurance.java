@@ -2,9 +2,9 @@ package exercise1;
 
 public abstract class Insurance {
     // The variable to hold the type of insurance
-    private String typeOfInsurance;
+    private final String typeOfInsurance;
     // The variable to hold the monthly cost of the insurance
-    private double monthlyCost;
+    private final double monthlyCost;
 
     // The abstract class constructor
     public Insurance(String typeOfInsurance, double monthlyCost){

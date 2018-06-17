@@ -1,6 +1,6 @@
 package exercise2;
 
-// Import for scanner
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // The Driver class for the Student classes
@@ -41,15 +41,15 @@ public class StudentDriver {
             aStudent = new FullTimeStudent(firstName,lastName);
         else{
             // The variable for credit hour input
-            double creditHour = 0;
+            double creditHour = 5;
             // For loop to loop until the correct answer is inputted
             for (int i = 0; i < 1; i++) {
                 System.out.print("Enter your Credit Hours : ");
                 // Try Catch statement to test whether the user inputted the wrong format.
                 try {
                     creditHour = input.nextDouble();
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid Answer.");
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid Response. Setting Credit Hour to 5");
                 } // End of Try Catch statement
                 if(creditHour <= 0.0 || creditHour > 40)
                     System.out.println("Credit Hour must be > than 0.0 and less than 40.");

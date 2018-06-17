@@ -3,9 +3,9 @@ package exercise2;
 // Abstract class of Student
 public abstract class Student {
     // An array for both first and last name
-    private String[] name;
+    private final String[] name;
     // Boolean check if the student is full time or not
-    private boolean isFullTime;
+    private final boolean isFullTime;
 
     // Constructor for abstract class Student
     public Student(String firstName, String lastName, boolean isFullTime){

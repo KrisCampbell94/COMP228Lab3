@@ -1,6 +1,7 @@
 package exercise1;
 
 // Used for Scanner capabilities
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Driver {
@@ -10,7 +11,7 @@ public class Driver {
         // Variable used to determine the insuranceType
         String insuranceType = "";
         // Variable used to determine the cost
-        double cost = 0;
+        double cost = 50;
         // An array of insurance instances
         Insurance[] insurances = new Insurance[5];
         // Start a for loop to insert each insurance 5 times
@@ -36,9 +37,9 @@ public class Driver {
                 // Try Catch statement to test whether the user inputted the wrong format.
                 try {
                     cost = input.nextDouble();
-                } catch (NumberFormatException e) {
+                } catch (InputMismatchException e) {
                     // Catches any input that's not numerical, and set the cost to 50
-                    System.out.println("Invalid Answer.");
+                    System.out.println("Invalid Response. Setting monthly cost to $50.");
                 } // End of Try Catch statement
                 if(cost < 0.0)
                     System.out.println("Monthly cost must be greater than 0.0");
